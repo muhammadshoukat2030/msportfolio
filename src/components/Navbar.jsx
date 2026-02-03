@@ -17,7 +17,7 @@ const Navbar = () => {
         
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center font-black text-white">N</div>
+          <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center font-black text-white">S</div>
           <span className="font-bold text-xl tracking-tighter text-white">
             MS.<span className="text-purple-500">WebApp</span>
             {/* Nexly */}
