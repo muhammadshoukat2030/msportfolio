@@ -43,7 +43,7 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-6">Social</h4>
             <div className="flex gap-4">
-              <a href="https://github.com/muhammadshoukat2030/forfolio" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-purple-600 transition-all">GH</a>
+              <a href="https://github.com/muhammadshoukat2030/" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-purple-600 transition-all">GH</a>
               <a href="https://www.linkedin.com/in/muhammad-shoukat-0178a3328" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-purple-600 transition-all">LN</a>
               <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-purple-600 transition-all">TW</a>
             </div>
