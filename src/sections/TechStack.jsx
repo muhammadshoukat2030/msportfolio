@@ -17,7 +17,7 @@ const TechStack = () => {
       title: "Backend Development",
       items: [
         { name: "Node.js", subtitle: "Runtime", icon: "⬢", color: "#339933" },
-        { name: "Laravel", subtitle: "PHP Framework", icon: "L", color: "#FF2D20" },
+        // { name: "Laravel", subtitle: "PHP Framework", icon: "L", color: "#FF2D20" },
         { name: "Express", subtitle: "Node Framework", icon: "E", color: "#828282" },
         { name: "Django", subtitle: "Python Framework", icon: "D", color: "#092E20" }
       ]

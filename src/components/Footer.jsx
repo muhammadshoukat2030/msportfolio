@@ -33,9 +33,9 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-6">Contact</h4>
             <ul className="space-y-4 text-sm text-gray-500">
-              <li>shoukat.engineer@email.com</li>
+              <li>muhammadshoukat2030@email.com</li>
               <li>Islamabad, Pakistan</li>
-              <li>+92 300 0000000</li>
+              <li>+92 3358004900</li>
             </ul>
           </div>
 
