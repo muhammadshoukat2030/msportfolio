@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center font-black">N</div>
-              <span className="font-bold text-xl tracking-tighter">Nextly<span className="text-purple-500">WebApp</span></span>
+              <span className="font-bold text-xl tracking-tighter">MS.<span className="text-purple-500">WebApp</span></span>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed">
               Building next-generation web and mobile solutions for modern businesses and startups.

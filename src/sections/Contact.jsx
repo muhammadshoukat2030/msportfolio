@@ -40,9 +40,8 @@ const Contact = () => {
           if (result.isConfirmed) {
             form.reset(); // Form clear karein
             
-            // OK click hone par Hero section ya top par bhejne ke liye
-            window.location.href = "/Hero"; // Agar id "hero" hai
-            // Ya phir top scroll
+            // FIXED: Removed window.location.href to prevent 404 error
+            // Only using smooth scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }
         });
