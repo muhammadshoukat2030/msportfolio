@@ -9,26 +9,25 @@ const Projects = () => {
       desc: "A specialized store management system for Weldon Paints, featuring real-time inventory tracking, sales reporting, and automated stock alerts.",
       image: "/assets/weldon-paints.jpg", 
       tags: ["Node.js", "Express", "React", "MongoDB"],
-      link: "#"
+      link: "https://hamzapaints.vercel.app/" 
     },
     {
       title: "Gulf Dunes Tourism",
       desc: "A comprehensive tourism platform offering desert safari bookings, city tours, and adventure packages with a seamless user interface.",
       image: "/assets/gulf-dunes.jpg", 
       tags: ["React", "Node.js", "Express", "MongoDB"],
-      link: "#" 
+      link: "https://www.gulfdunestourism.com/" 
     },
     {
       title: "FoodDel - Food Delivery Platform",
       desc: "A high-performance MERN stack food delivery application featuring real-time order tracking, secure payment gateways, and an intuitive restaurant dashboard.",
       image: "/assets/food.jpg", 
       tags: ["React", "Node.js", "Express", "MongoDB"],
-      link: "#" 
+      link: "#" // Future live project ke liye placeholder
     },
   ];
 
   return (
-    // ID ko "projects" kar diya hai taake Navbar se link ho jaye
     <section id="projects" className="py-24 px-6 max-w-7xl mx-auto scroll-mt-20">
       <div className="text-center mb-16">
         <SectionTag text="Portfolio" />
@@ -38,7 +37,7 @@ const Projects = () => {
         </p>
       </div>
 
-      {/* Grid Layout: 1 column on mobile, 2 on medium, 3 on large screens */}
+      {/* Responsive Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projectData.map((project, i) => (
           <ProjectCard key={i} {...project} />
