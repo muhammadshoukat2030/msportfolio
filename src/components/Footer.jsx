@@ -52,7 +52,8 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600 text-center">
-          <p>© {currentYear} NexlyWebApp. All rights reserved.</p>
+          {/* <p>© {currentYear} NexlyWebApp. All rights reserved.</p> */}
+          <p>© {currentYear} MS.WebApp. All rights reserved.</p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Service</a>
