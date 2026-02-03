@@ -41,7 +41,7 @@ const Contact = () => {
             form.reset(); // Form clear karein
             
             // OK click hone par Hero section ya top par bhejne ke liye
-            window.location.href = "/sections/Hero"; // Agar id "hero" hai
+            window.location.href = "/Hero"; // Agar id "hero" hai
             // Ya phir top scroll
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }
