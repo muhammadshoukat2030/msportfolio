@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* Tailwind v4 mein custom themes aise banti hain */
+@theme {
+  --color-brand-purple: #8b5cf6;
+  --color-dark-bg: #030303;
+  --color-card-bg: #0A0A0A;
+}
+
+/* Global Styles */
+@layer base {
+  body {
+    background-color: var(--color-dark-bg);
+    color: white;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+/* Custom Components */
+@layer components {
+  .velocity-card {
+    background-color: var(--color-card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .velocity-card:hover {
+    border-color: rgba(139, 92, 246, 0.4);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
+  }
+
+  .gradient-text {
+    background: linear-gradient(to right, #fff, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
