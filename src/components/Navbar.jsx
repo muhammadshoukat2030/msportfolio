@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Nav links structure
+  // Nav links structure - IDs matching with App.js sections
   const navLinks = [
     { name: "Services", href: "#services" },
-    { name: "Portfolio", href: "#projects" }, // Aapke App.jsx mein id="projects" use hui hai
+    { name: "Portfolio", href: "#projects" }, 
     { name: "Pricing", href: "#pricing" },
     { name: "Contact", href: "#contact" },
   ];
@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full z-[100] bg-[#030303]/80 backdrop-blur-md border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
-        {/* Logo - Clicking this scrolls to top */}
+        {/* Logo */}
         <a href="#" className="flex items-center gap-2">
           <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center font-black text-white">N</div>
           <span className="font-bold text-xl tracking-tighter text-white">
@@ -31,7 +31,6 @@ const Navbar = () => {
             </a>
           ))}
           
-          {/* Get Started Button - Linked to Contact Section */}
           <a 
             href="#contact" 
             className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg font-bold transition-all shadow-lg shadow-purple-500/20"
@@ -69,7 +68,6 @@ const Navbar = () => {
             </a>
           ))}
           
-          {/* Mobile Get Started Button - Linked to Contact Section */}
           <a 
             href="#contact" 
             onClick={() => setIsOpen(false)}
