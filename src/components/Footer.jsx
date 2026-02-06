@@ -4,13 +4,13 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#030303] border-t border-white/5 pt-16 pb-8 px-6">
+    <footer className="bg-[#000000] border-t border-white/5 pt-16 pb-8 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Logo & About */}
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center font-black">N</div>
+              <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center font-black">S</div>
               <span className="font-bold text-xl tracking-tighter">MS.<span className="text-purple-500">WebApp</span></span>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed">

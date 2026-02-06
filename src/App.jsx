@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-[#030303] min-h-screen text-white selection:bg-purple-500/30 font-sans">
+    <div className="bg-[#000000] min-h-screen text-white selection:bg-purple-500/30 font-sans">
       {/* 1. Navbar with Hamburger & Smooth Scroll links */}
       <Navbar />
       

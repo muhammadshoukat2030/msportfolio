@@ -27,7 +27,7 @@ const TechStack = () => {
       items: [
         { name: "React Native", subtitle: "iOS & Android", icon: "RN", color: "#61DAFB" },
         { name: "Flutter", subtitle: "Cross-Platform", icon: "F", color: "#02569B" },
-        { name: "Expo", subtitle: "Framework", icon: "E", color: "#ffffff" }
+        // { name: "Expo", subtitle: "Framework", icon: "E", color: "#ffffff" }
       ]
     },
     {

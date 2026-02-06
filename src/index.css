@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
 /* Tailwind v4 mein custom themes aise banti hain */
-@theme {
-  --color-brand-purple: #8b5cf6;
-  --color-dark-bg: #030303;
-  --color-card-bg: #0A0A0A;
+@layer utilities {
+  :root {
+    --color-brand-purple: #8b5cf6;
+    --color-dark-bg: #030303;
+    --color-card-bg: #0A0A0A;
+  }
 }
 
 /* Global Styles */
@@ -34,6 +36,7 @@
   .gradient-text {
     background: linear-gradient(to right, #fff, #8b5cf6);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }

@@ -19,7 +19,7 @@ const Process = () => {
       </div>
 
       <div className="relative space-y-12">
-        <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500/50 to-transparent"></div>
+        <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-linear-to-b from-purple-500/50 to-transparent"></div>
         {steps.map((step, i) => (
           <div key={i} className="relative pl-20 group">
             <div className="absolute left-0 w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center font-bold text-xl z-10 shadow-[0_0_15px_rgba(147,51,234,0.5)]">
