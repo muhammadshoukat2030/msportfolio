@@ -9,7 +9,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="pt-32 pb-20 px-6 max-w-7xl mx-auto text-center">
+    <section className="pt-32 pb-20 px-6 max-w-6xl mx-auto text-center">
       <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-green-500/20 bg-green-500/5 text-green-300 text-lxs">
         <span className="w-3 h-3 bg-green-300 rounded-full animate-pulse"></span>
         Available 7 days/week • 2 hour response
@@ -38,13 +38,15 @@ const Hero = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {stats.map((s, i) => (
           <div key={i} className="velocity-card">
-            <div className="text-2xl mb-2">{s.icon}</div>
-            <div className="text-3xl font-bold mb-1">{s.value}</div>
-            <div className="text-gray-500 text-[10px] uppercase tracking-widest">{s.label}</div>
+            <div className="text-4xl mb-4">{s.icon}</div>
+            <div className="text-5xl font-bold mb-1">{s.value}</div>
+            <div className="text-white/70 font-bold text-[12px] uppercase tracking-widest">{s.label}</div>
           </div>
         ))}
       </div>
+
     </section>
+
   );
 };
 

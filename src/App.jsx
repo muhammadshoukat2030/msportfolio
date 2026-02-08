@@ -1,30 +1,35 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
+import TrustBar from './components/TrustBar'; 
 import Services from './sections/Services'; // Industries section iske andar add kiya hai
 import Projects from './sections/Projects'; // MERN projects ki info yahan hai
 import Process from './sections/Process'; 
 import TechStack from './sections/TechStack'; // Cloud & Deployment added
 import Pricing from './sections/Pricing';
+import WhyUs from "./sections/WhyUs";
 import Contact from './sections/Contact'; 
 import FAQ from './sections/FAQ';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="bg-[#000000] min-h-screen text-white selection:bg-purple-500/30 font-sans">
+    <div className="bg-[#000000b5] min-h-screen text-white selection:bg-purple-500/30 font-sans">
       {/* 1. Navbar with Hamburger & Smooth Scroll links */}
       <Navbar />
       
       <main>
         {/* 2. Hero Section */}
         <Hero />
+        <TrustBar />
         
         {/* 3. Services & Industries We Serve */}
         <Services />
         
         {/* 4. Portfolio (FoodDel, Weldon Paints, Gulf Dunes, etc.) */}
         <Projects />
+        
+        <WhyUs />
         
         {/* 5. Working Process Timeline */}
         <Process /> 
