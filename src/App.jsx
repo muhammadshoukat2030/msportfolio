@@ -2,52 +2,55 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import TrustBar from './components/TrustBar'; 
-import Services from './sections/Services'; // Industries section iske andar add kiya hai
-import Projects from './sections/Projects'; // MERN projects ki info yahan hai
-import Process from './sections/Process'; 
-import TechStack from './sections/TechStack'; // Cloud & Deployment added
-import Pricing from './sections/Pricing';
+import Services from './sections/Services'; 
+import Projects from './sections/Projects'; 
 import WhyUs from "./sections/WhyUs";
-import Contact from './sections/Contact'; 
+import Process from './sections/Process'; 
+import TechStack from './sections/TechStack'; 
+import Pricing from './sections/Pricing';
+import Testimonials from './sections/Testimonials'; // Naya section jo humne banaya
 import FAQ from './sections/FAQ';
+import Contact from './sections/Contact'; 
 import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="bg-[#000000b5] min-h-screen text-white selection:bg-purple-500/30 font-sans">
-      {/* 1. Navbar with Hamburger & Smooth Scroll links */}
+      {/* 1. Navigation */}
       <Navbar />
       
       <main>
-        {/* 2. Hero Section */}
+        {/* 2. Introduction & Social Proof */}
         <Hero />
         <TrustBar />
         
-        {/* 3. Services & Industries We Serve */}
+        {/* 3. What You Offer */}
         <Services />
         
-        {/* 4. Portfolio (FoodDel, Weldon Paints, Gulf Dunes, etc.) */}
+        {/* 4. Proof of Work (Portfolio) */}
         <Projects />
         
+        {/* 5. Differentiators (Why choose you?) */}
         <WhyUs />
         
-        {/* 5. Working Process Timeline */}
+        {/* 6. Transparency (How you work & Tools you use) */}
         <Process /> 
-        
-        {/* 6. Full Tech Stack (Frontend, Backend, DB, Cloud) */}
         <TechStack />
         
-        {/* 7. Pricing Packages */}
+        {/* 7. Investment (Pricing) */}
         <Pricing />
         
-        {/* 8. Contact Form Section */}
-        <Contact /> 
+        {/* 8. Trust Building (Social Proof) */}
+        <Testimonials /> 
         
-        {/* 9. FAQ Section (Clean & Minimal) */}
+        {/* 9. Objection Handling (Questions) */}
         <FAQ />
+
+        {/* 10. Final Call to Action (Contact) */}
+        <Contact /> 
       </main>
       
-      {/* 10. Professional Footer */}
+      {/* 11. Footer & Floating WhatsApp */}
       <Footer />
     </div>
   );
