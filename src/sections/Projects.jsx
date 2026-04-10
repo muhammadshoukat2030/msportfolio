@@ -29,7 +29,7 @@ const Projects = () => {
       desc: "A high-performance MERN stack food delivery application featuring real-time order tracking, secure payment gateways, and an intuitive restaurant dashboard.",
       image: foodimage, 
       tags: ["React", "Node.js", "Express", "MongoDB"],
-      link: "#"
+      link: "https://food-nine-ashy.vercel.app/"
     },
   ];
 
