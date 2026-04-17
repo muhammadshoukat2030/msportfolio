@@ -22,8 +22,8 @@ const Services = () => {
     { title: "Fitness & Wellness", icon: "💪", desc: "Gym management, fitness tracking, personal training, and nutrition apps." },
     { title: "Travel & Hospitality", icon: "✈️", desc: "Hotel bookings, travel agencies, tour platforms, and vacation rentals." },
     { title: "Beauty & Salon", icon: "💅", desc: "Appointment booking, beauty e-commerce, memberships, and service catalogs." },
-    { title: "Social Media & Networking", icon: "📱", desc: "Social platforms, community apps, dating apps, and networking tools." },
-    { title: "Gaming & Entertainment", icon: "🎮", desc: "Web games, streaming platforms, event ticketing, and entertainment apps." }
+    // { title: "Social Media & Networking", icon: "📱", desc: "Social platforms, community apps, dating apps, and networking tools." },
+    // { title: "Gaming & Entertainment", icon: "🎮", desc: "Web games, streaming platforms, event ticketing, and entertainment apps." }
   ];
 
   return (

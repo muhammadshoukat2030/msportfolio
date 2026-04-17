@@ -1,84 +1,138 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SectionTag from '../components/SectionTag';
 
 const Testimonials = () => {
+  const [current, setCurrent] = useState(0);
+
   const reviews = [
     {
       name: "Sohail Afridi",
-      role: "CEO, TechFlow QATAR 🇶🇦",
-      content: "MS.WebApp delivered our enterprise project 2 weeks ahead of schedule. The React architecture is clean and the performance is top-notch. Highly recommended for Qatar-based businesses!",
+      role: "Product Manager, Gulf Dunes 🇶🇦",
+      content: "Devzore delivered a high-performance tourism platform that exceeded our expectations. Their attention to detail, UI/UX quality, and backend integration significantly improved our booking experience and customer satisfaction.",
       avatar: "SA",
       rating: 5
     },
     {
       name: "Hamza Khan",
-      role: "Founder, HK Solutions PAKISTAN 🇵🇰",
-      content: "Working with MS.WebApp was a breeze. They understood our local market needs perfectly and integrated the payment systems flawlessly. Best developer team in the region!",
+      role: "Founder, HK Solutions 🇵🇰",
+      content: "We needed a complete retail solution, and Devzore delivered perfectly. The POS system with billing automation and inventory tracking made our operations faster and more reliable.",
       avatar: "HK",
       rating: 5
     },
     {
-      name: "Omar Al-Sayed",
-      role: "Product Manager, Gulf Dunes DUBAI 🇦🇪",
-      content: "Excellent communication and high-quality UI/UX work. They handled our API integrations perfectly. The modern design they provided has significantly increased our user engagement.",
+      name: "Omar Al-Sayedi",
+      role: " CEO, TechFlow QATAR 🇶🇦",
+      content: "Professional team with strong React expertise. The platform was delivered on time with excellent performance and modern design. Highly recommended for serious businesses.",
       avatar: "OA",
+      rating: 5
+    },
+    {
+      name: "Zainab Malik",
+      role: "Owner, Aroma Brew 🇵🇰",
+      content: "Our coffee shop is now fully automated thanks to Devzore. Billing, stock management, and reporting are all smooth and efficient. Great experience overall.",
+      avatar: "ZM",
+      rating: 5
+    },
+    {
+      name: "Ahmed Raza",
+      role: "Food Delivery Business Owner UAE 🇦🇪",
+      content: "Devzore developed a powerful and user-friendly food delivery website for our business. The platform is fast, easy to manage, and has significantly improved our order handling and customer experience.",
+      avatar: "AR",
       rating: 5
     }
   ];
 
+  // ✅ Screen detect
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const cardsPerView = isDesktop ? 3 : 1;
+
+  // ✅ Auto Slide
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) =>
+        prev >= reviews.length - cardsPerView ? 0 : prev + 1
+      );
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [cardsPerView]);
+
   return (
-    <section id="testimonials" className="py-24 px-4 md:px-6 max-w-7xl mx-auto bg-[#050505]">
+    <section className="py-24 px-4 md:px-6 max-w-6xl mx-auto bg-[#050505]">
+
+      {/* Heading */}
       <div className="text-center mb-16">
         <SectionTag text="TESTIMONIALS" />
-        <h2 className="text-4xl md:text-5xl font-bold mt-4 text-white">Trusted by Clients Worldwide</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mt-4 text-white">
+          What Our Clients Say About Devzore
+        </h2>
         <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-sm md:text-base">
-          Don't just take our word for it. Here is what business owners from Qatar, Pakistan, and UAE say about working with MS.WebApp.
+          We help businesses grow with powerful web applications, modern UI/UX,
+          and smart automation systems. Here’s what our clients say about working with us.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {reviews.map((review, index) => (
-          <div 
-            key={index} 
-            className="p-8 bg-[#0A0A0A] border border-white/5 rounded-[5px] hover:border-purple-500/30 transition-all group relative overflow-hidden"
-          >
-            {/* Quote Icon Background */}
-            <div className="absolute -top-4 -right-2 text-white/5 text-8xl font-serif pointer-events-none group-hover:text-purple-500/10 transition-colors">
-              "
-            </div>
+      {/* Slider */}
+      <div className="overflow-hidden">
+        <div
+          className="flex transition-transform duration-700"
+          style={{
+            transform: `translateX(-${(current * 100) / cardsPerView}%)`,
+          }}
+        >
+          {reviews.map((review, index) => (
+            <div
+              key={index}
+              className="px-4 flex-shrink-0 w-full md:w-1/3"
+            >
+              <div className="p-8 bg-[#0A0A0A] border border-white/5 rounded-lg text-center h-full">
 
-            {/* Stars */}
-            <div className="flex gap-1 mb-6">
-              {[...Array(review.rating)].map((_, i) => (
-                <svg key={i} className="w-4 h-4 text-yellow-500 fill-current" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
-            </div>
+                {/* Stars */}
+                <div className="flex justify-center gap-1 mb-4">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <span key={i} className="text-yellow-500">★</span>
+                  ))}
+                </div>
 
-            <p className="text-gray-300 italic mb-8 relative z-10 leading-relaxed text-sm md:text-base">
-              "{review.content}"
-            </p>
+                <p className="text-gray-300 italic mb-6 text-sm md:text-base leading-relaxed">
+                  "{review.content}"
+                </p>
 
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-purple-600/20 border border-purple-500/30 rounded-full flex items-center justify-center font-bold text-purple-400">
-                {review.avatar}
+                <div className="flex flex-col items-center">
+                  <div className="w-12 h-12 bg-purple-600/20 rounded-full flex items-center justify-center text-purple-400 font-bold">
+                    {review.avatar}
+                  </div>
+                  <h4 className="text-white font-bold mt-3 text-sm">{review.name}</h4>
+                  <p className="text-gray-500 text-xs">{review.role}</p>
+                </div>
+
               </div>
-              <div>
-                <h4 className="text-white font-bold text-sm">{review.name}</h4>
-                <p className="text-gray-500 text-xs">{review.role}</p>
-              </div>
             </div>
-          </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Dots */}
+      <div className="flex justify-center mt-6 gap-2">
+        {Array.from({ length: reviews.length - cardsPerView + 1 }).map((_, i) => (
+          <div
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-3 h-3 rounded-full cursor-pointer ${current === i ? "bg-purple-500" : "bg-gray-500"
+              }`}
+          />
         ))}
       </div>
 
-      {/* Trust Badge */}
-      <div className="mt-16 flex flex-wrap justify-center items-center gap-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-         <span className="text-white font-bold text-xl uppercase tracking-tighter">Global Excellence</span>
-         <span className="text-white font-bold text-xl uppercase tracking-tighter">5-Star Rated Service</span>
-         <span className="text-white font-bold text-xl uppercase tracking-tighter">Verified Developer</span>
-      </div>
     </section>
   );
 };

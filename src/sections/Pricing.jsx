@@ -7,7 +7,7 @@ const Pricing = () => {
   const [modalPlanName, setModalPlanName] = useState("");
 
   // Calculator states
-  const [basePrice, setBasePrice] = useState(750);
+  const [basePrice, setBasePrice] = useState(100);
   const [features, setFeatures] = useState({ payment: false, admin: false, api: false });
 
   const featureCosts = { payment: 500, admin: 300, api: 400 };
@@ -74,9 +74,9 @@ const Pricing = () => {
               onChange={(e) => setBasePrice(parseInt(e.target.value))}
               className="w-full bg-white/5 border border-white/10 p-4 rounded-[5px] outline-none focus:border-purple-500 text-white appearance-none cursor-pointer transition-all"
             >
-              <option value="750" className="bg-[#0A0A0A]">Simple Landing Page - $750</option>
-              <option value="1500" className="bg-[#0A0A0A]">Business Website - $1,500</option>
-              <option value="3000" className="bg-[#0A0A0A]">E-commerce / App - $3,000</option>
+              <option value="750" className="bg-[#0A0A0A]">Simple Landing Page - $100</option>
+              <option value="1500" className="bg-[#0A0A0A]">Business Website - $1,200</option>
+              <option value="3000" className="bg-[#0A0A0A]">E-commerce / App - $2,500</option>
             </select>
           </div>
 

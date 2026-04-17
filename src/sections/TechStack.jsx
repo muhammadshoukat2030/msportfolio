@@ -19,14 +19,14 @@ const TechStack = () => {
         { name: "Node.js", subtitle: "Runtime", icon: "⬢", color: "#339933" },
         // { name: "Laravel", subtitle: "PHP Framework", icon: "L", color: "#FF2D20" },
         { name: "Express", subtitle: "Node Framework", icon: "E", color: "#828282" },
-        { name: "Django", subtitle: "Python Framework", icon: "D", color: "#092E20" }
+        // { name: "Django", subtitle: "Python Framework", icon: "D", color: "#092E20" }
       ]
     },
     {
       title: "Mobile Development",
       items: [
         { name: "React Native", subtitle: "iOS & Android", icon: "RN", color: "#61DAFB" },
-        { name: "Flutter", subtitle: "Cross-Platform", icon: "F", color: "#02569B" },
+        // { name: "Flutter", subtitle: "Cross-Platform", icon: "F", color: "#02569B" },
         // { name: "Expo", subtitle: "Framework", icon: "E", color: "#ffffff" }
       ]
     },
@@ -36,7 +36,7 @@ const TechStack = () => {
         { name: "PostgreSQL", subtitle: "Relational", icon: "🐘", color: "#336791" },
         { name: "MongoDB", subtitle: "NoSQL", icon: "🍃", color: "#47A248" },
         { name: "MySQL", subtitle: "SQL Database", icon: "🐬", color: "#4479A1" },
-        { name: "Redis", subtitle: "Caching", icon: "R", color: "#DC382D" }
+        // { name: "Redis", subtitle: "Caching", icon: "R", color: "#DC382D" }
       ]
     },
     {

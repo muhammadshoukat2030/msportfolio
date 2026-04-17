@@ -13,15 +13,18 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-100 bg-[#030303]/80 backdrop-blur-md border-b border-white/5">
+    <nav className="fixed top-0 w-full z-[100] bg-[#030303]/80 backdrop-blur-md border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
-        {/* Logo */}
-        <a href="#" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center font-black text-white">S</div>
+        {/* Logo Integration */}
+        <a href="#" className="flex items-center gap-3">
+          <img 
+            src="/logo.png" 
+            alt="DevZore Logo" 
+            className="h-10 w-auto hover:opacity-90 transition-opacity" 
+          />
           <span className="font-bold text-xl tracking-tighter text-white">
-            MS.<span className="text-purple-500">WebApp</span>
-            {/* Nexly */}
+            DevZore
           </span>
         </a>
         
