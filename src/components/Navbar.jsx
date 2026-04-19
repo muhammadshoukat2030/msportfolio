@@ -21,7 +21,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center gap-3">
           <img 
             src="/logo1.png" 
-            alt="DevZore Logo" 
+            alt="DevZore Logo1" 
             className="h-10 w-auto hover:opacity-90 transition-opacity" 
           />
           <span className="font-bold text-xl tracking-tighter text-white">
